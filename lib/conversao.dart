@@ -86,6 +86,10 @@ class _ConversaoState extends State<Conversao> {
     if(index == 0){
       _valorReal.clear();
       _valorDolar.clear();
+      setState(() {
+        _resposta = "";
+      });
+
     }else{
       if( _valorReal.text.isEmpty || _valorDolar.text.isEmpty ){
         key.currentState.showSnackBar(SnackBar(
